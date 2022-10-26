@@ -8,12 +8,12 @@ public class CustomerServiceImpl implements CustomerService{
     CustomerRepository customerRepository;
 
     @Override
-    public Customer getCustomer(String id) {
-        return customerRepository.findById()
+    public Customer getCustomer(Integer id) {
+        return customerRepository.findById(id).get();
     }
 
     @Override
-    public Boolean createCustomer(Customer customer) {
-        return null;
+    public void createCustomer(Customer customer) {
+         customerRepository.save(customer);
     }
 }

@@ -1,17 +1,24 @@
 package com.customer.demo;
 
-@Table()
+import javax.persistence.*;
+
+@Table(name="CUSTOMERS")
 @Entity
 public class Customer {
-    private String id;
+    @Id
+    @GeneratedValue
+    @Column
+    private Integer id;
+    @Column
     private String name;
+    @Column
     private String address;
 
-    public String getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 

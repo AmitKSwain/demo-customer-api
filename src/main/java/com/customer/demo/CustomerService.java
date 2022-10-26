@@ -4,6 +4,6 @@ import org.springframework.stereotype.Service;
 
 @Service
 public interface CustomerService {
-    Customer getCustomer(String id);
-    Boolean createCustomer(Customer customer);
+    Customer getCustomer(Integer id);
+    void createCustomer(Customer customer);
 }
