@@ -6,16 +6,16 @@ import org.springframework.web.bind.annotation.*;
 @RestController("customer")
 public class CustomerController {
     @Autowired
-    CustomerService customerService;
+    CustomerService customerServiceImpl;
     @GetMapping
     Customer getCustomer(@PathVariable("id") Integer id ){
 
-        return customerService.getCustomer(id);
+        return customerServiceImpl.getCustomer(id);
     }
     @PostMapping
     Integer createCustomer(@RequestBody Customer customer){
 
-         customerService.createCustomer(customer);
+        customerServiceImpl.createCustomer(customer);
          return customer.getId();
     }
 }

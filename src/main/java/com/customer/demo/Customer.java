@@ -8,7 +8,7 @@ public class Customer {
     @Id
     @GeneratedValue
     @Column
-    private Integer id;
+    private int id;
     @Column
     private String name;
     @Column
